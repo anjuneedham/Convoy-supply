@@ -1,0 +1,6 @@
+Supplier Name,Contact Name,Contact Email,Contact Phone,Company Certifications,Years in Business,Date Contacted,Date Response Received,Response Time (hrs),CS-01 50-Unit Cost,$,CS-01 100-Unit Cost,$,CS-01 500-Unit Cost,$,CS-02 50-Unit Cost,$,CS-02 100-Unit Cost,$,CS-02 500-Unit Cost,$,Shipping Cost (Sample),USD,Shipping Cost (50-100 units),USD,Sample Lead Time (days),Bulk Lead Time (days),MOQ (units),Material Spec Quality (1-5),Sample Quality (1-5),Communication Score (1-5),Price Competitiveness Score (1-5),TOTAL SCORE (out of 20),CS-01 Landed Cost per Unit,$,CS-02 Landed Cost per Unit,$,Notes
+Supplier A,John Zhang,john@supplier-a.com,+86-769-1234-5678,ISO 9001,8,2024-09-20,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier B,Maria Rodriguez,maria@supplier-b.com,+57-1-234-5678,ISO 9001 + BSCI,12,2024-09-20,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier C,Michael Chen,michael@supplier-c.com,+86-755-1234-5678,ISO 9001,5,2024-09-20,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier D,Sarah Johnson,sarah@supplier-d.com,+1-704-1234-5678,None,3,2024-09-20,,,,,,,,,,,,,,,,,,,,,,,,,,
+Supplier E,David Park,david@supplier-e.com,+82-2-1234-5678,ISO 9001,6,2024-09-20,,,,,,,,,,,,,,,,,,,,,,,,,,
