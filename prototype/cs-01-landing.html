@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS-01 Cab Command Organizer — ConvoySupply</title>
+<meta name="description" content="Static prototype of the ConvoySupply CS-01 funnel landing page. Layout and copy review only — not the production Shopify page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap">
+<style>
+:root{
+  --asphalt:#1C1F21;--steel:#3A4247;--hiviz:#E8B23A;--hiviz-dk:#C9962A;
+  --concrete:#EDEBE7;--paper:#FAF9F7;--line:#C9C5BE;--ink:#14171A;--mute:#6B7075;
+  --good:#3F7D5C;--warn:#B3502B;
+  --head:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Roboto Mono',ui-monospace,Menlo,monospace;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+section{padding:64px 0}
+.dark{background:var(--asphalt);color:var(--concrete)}
+.light{background:var(--concrete)}
+.paper{background:var(--paper)}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;margin:0 0 16px;line-height:1.03;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.1rem,7vw,4rem);font-weight:700}
+h2{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:700}
+h3{font-size:1.08rem;font-weight:600;letter-spacing:.02em}
+p{margin:0 0 16px;max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--hiviz-dk);margin:0 0 12px}
+.dark .eyebrow{color:var(--hiviz)}
+.lede{font-size:clamp(1rem,2.2vw,1.2rem);max-width:62ch}
+.micro{font-size:.8rem;color:var(--mute);margin-top:12px}
+.dark .micro{color:var(--line)}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;padding:16px 32px;border:2px solid transparent;border-radius:2px;text-decoration:none;cursor:pointer;transition:background .15s,color .15s}
+.btn-primary{background:var(--hiviz);color:var(--asphalt)}
+.btn-primary:hover{background:var(--hiviz-dk)}
+.btn-ghost{background:transparent;color:currentColor;border-color:currentColor}
+.btn-ghost:hover{background:currentColor;color:var(--asphalt)}
+.btn+.btn{margin-left:12px}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px}
+.dark .card{background:var(--steel);border-color:#4A5359}
+.note{border-left:3px solid var(--hiviz);padding:16px 20px;background:rgba(232,178,58,.08);border-radius:2px;margin-top:28px}
+.dark .note{background:rgba(232,178,58,.14)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:8px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--head);text-transform:uppercase;letter-spacing:.03em;font-weight:600}
+td{font-family:var(--mono);font-size:.85rem}
+.imgslot{background:repeating-linear-gradient(45deg,#d7d3cc,#d7d3cc 10px,#cfcac2 10px,#cfcac2 20px);border:1px dashed #9a958d;border-radius:2px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:var(--mono);font-size:.72rem;color:#5c5750;min-height:180px;margin-bottom:16px}
+.hero-slot{min-height:380px}
+.topbar{background:var(--asphalt);color:var(--concrete);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:9px 16px;text-transform:uppercase}
+.brandbar{border-bottom:1px solid var(--line);padding:18px 0;background:var(--paper)}
+.wordmark{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:1.2rem;text-decoration:none;color:var(--ink)}
+.herogrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.offer{display:flex;flex-direction:column;position:relative}
+.offer.flag{border:2px solid var(--hiviz)}
+.flagtag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--hiviz);color:var(--asphalt);padding:4px 10px;border-radius:2px;align-self:flex-start;margin-bottom:12px}
+.price{font-family:var(--mono);margin:auto 0 16px}
+.price strong{font-size:1.7rem}
+.was{color:var(--mute);margin-right:8px}
+.save{color:var(--good);font-weight:600;margin-left:8px}
+.offer .btn{width:100%;text-align:center}
+details{border-bottom:1px solid var(--line)}
+summary{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:1.03rem;letter-spacing:.02em;padding:17px 32px 17px 0;cursor:pointer;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:1.5rem;color:var(--hiviz-dk)}
+details[open] summary::after{content:"\2013"}
+details .ans{padding:0 0 20px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--asphalt);color:var(--concrete);border-top:2px solid var(--hiviz);padding:10px 12px;display:none}
+.sticky.on{display:block}
+.sticky-in{display:flex;align-items:center;gap:12px;max-width:var(--max);margin:0 auto}
+.sticky-name{font-family:var(--head);text-transform:uppercase;font-size:.88rem;display:block;line-height:1.2}
+.sticky-price{font-family:var(--mono);font-size:1.02rem}
+.sticky .btn{flex:1;padding:13px 16px;font-size:.93rem;text-align:center}
+.footnote{background:var(--asphalt);color:var(--line);font-family:var(--mono);font-size:.72rem;padding:28px 16px;text-align:center;line-height:1.7}
+.tbc{background:rgba(179,80,43,.14);color:#8c3d1f;padding:0 4px;border-radius:2px;font-family:var(--mono);font-size:.85em}
+@media(max-width:899px){.herogrid{grid-template-columns:1fr;gap:28px}.herogrid .imgslot{order:-1}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:599px){.g2,.g3{grid-template-columns:1fr}section{padding:44px 0}.btn{display:block;text-align:center}.btn+.btn{margin:12px 0 0}.sticky .btn{display:block}}
+@media(min-width:750px){.sticky{display:none!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Prototype — layout &amp; copy review only. Image slots are placeholders. Values in <span style="color:var(--hiviz)">[TBC]</span> must be confirmed before publishing.</div>
+
+<header class="brandbar">
+  <div class="wrap"><a class="wordmark" href="#">ConvoySupply</a></div>
+</header>
+
+<!-- 1 HOOK -->
+<section class="paper">
+  <div class="wrap herogrid">
+    <div>
+      <p class="eyebrow">For OTR drivers · CS-01 Cab Command Organizer</p>
+      <h1>Still throwing everything on the passenger seat?</h1>
+      <p class="lede">Meet the CS-01 — a seat-back command center sized for a Class 8 sleeper, so every daily-use item has one place and stays there when you brake.</p>
+      <a class="btn btn-primary" href="#offer">Get yours today — $54.99</a>
+      <p class="micro">Free US shipping over $75 · 30-day returns · No drilling, no tools</p>
+    </div>
+    <div class="imgslot hero-slot">LP-HERO<br>Split frame, same cab, same angle, same light.<br>Left: passenger seat piled with gear.<br>Right: CS-01 fitted, everything in place.</div>
+  </div>
+</section>
+
+<!-- 2 PROBLEM -->
+<section class="dark">
+  <div class="wrap">
+    <h2>You know exactly where this is.</h2>
+    <p class="lede">It starts with a phone and a water bottle. By Wednesday it's a clipboard, two chargers, gloves, a flashlight, a jacket, and whatever you ate at 2am.</p>
+    <p class="lede">You brake for a four-wheeler and half of it's in the footwell. You know it's in here somewhere. You've been looking for four minutes. You're due at a dock in twenty.</p>
+    <div class="imgslot" style="margin:28px 0">LP-PROB-01 — genuinely cluttered passenger seat, natural light, real truck. Not staged-messy. Actually messy.</div>
+    <div class="grid g3">
+      <div class="card"><h3>It slides</h3><p>Every hard stop redistributes everything onto the floor.</p></div>
+      <div class="card"><h3>It's buried</h3><p>Whatever you need is under whatever you don't.</p></div>
+      <div class="card"><h3>It's not yours</h3><p>Your $180,000 truck and you've got nowhere to put a pair of gloves.</p></div>
+    </div>
+    <div class="note"><p style="margin:0">Nobody designed this space for a person. It was designed to move freight, and you were an afterthought.</p></div>
+  </div>
+</section>
+
+<!-- 3 SOLUTION -->
+<section class="paper">
+  <div class="wrap">
+    <h2>The CS-01 gives all of it one place.</h2>
+    <div class="imgslot" style="margin:20px 0 28px">LP-SOL-01 — CS-01 fitted and loaded, shot from the driver's seat, showing reach</div>
+    <div class="grid g3">
+      <div class="card"><h3>What it does</h3><p>Straps to the passenger seat back. Deep bottom pockets for bulk. Elastic sleeves for cables, tools and a flashlight. A padded slot for a tablet. A flat document pocket that fits a clipboard without folding it.</p></div>
+      <div class="card"><h3>How it works</h3><p>Two cam-buckle straps over the seat back, one anchor strap behind the headrest. About two minutes. No tools. Nothing drilled, nothing bolted — so nothing to clear with your carrier, and it comes with you to the next truck.</p></div>
+      <div class="card"><h3>Why it's different</h3><p>Almost everything sold for this is a car organizer with truck keywords in the listing title. The straps don't reach a Class 8 seat and the panel sags the moment you load it. The CS-01 was sized against real cab dimensions and box-stitched at every load point.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 BENEFITS -->
+<section class="light">
+  <div class="wrap">
+    <h2>What actually changes</h2>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-01</div><h3>Nothing moves when you brake</h3><p>Defined pockets and elastic retention. Gear stays where you put it.</p></div>
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-02</div><h3>You stop hunting</h3><p>One place for everything. No more four-minute searches for the same three items.</p></div>
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-03</div><h3>You get the seat back</h3><p>The passenger seat becomes a seat again.</p></div>
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-04</div><h3>Everything in reach</h3><p>Positioned so you reach it from the driver's seat without twisting or unbuckling.</p></div>
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-05</div><h3>Two minutes to fit</h3><p>Straps on, straps off. No tools, nothing modified, no permission needed.</p></div>
+      <div class="card"><div class="imgslot" style="min-height:130px">LP-BEN-06</div><h3>Sized for your cab</h3><p>Designed against Class 8 dimensions. Every measurement published.</p></div>
+    </div>
+    <p style="margin-top:32px"><a class="btn btn-primary" href="#offer">Get yours today — $54.99</a></p>
+  </div>
+</section>
+
+<!-- 5 DEMONSTRATION -->
+<section class="paper">
+  <div class="wrap">
+    <p class="eyebrow">Section 5</p>
+    <h2>How it's built and where everything goes</h2>
+    <div class="imgslot" style="margin:20px 0 28px;min-height:260px">LP-DEMO-01 — annotated diagram. Product flat, callout lines to each pocket with what it holds and its dimension.</div>
+    <div class="grid g2">
+      <div>
+        <h3>Where everything goes</h3>
+        <table>
+          <tr><th>Deep pocket, lower left</th><td>Water bottle, thermos, tall items</td></tr>
+          <tr><th>Deep pocket, lower right</th><td>Gloves, hat, bulk soft goods</td></tr>
+          <tr><th>Elastic sleeves ×3</th><td>Cables, flashlight, multitool, pens</td></tr>
+          <tr><th>Padded slot</th><td>Tablet or 13" laptop</td></tr>
+          <tr><th>Flat document pocket</th><td>Clipboard, logbook, folio (fits the CS-03)</td></tr>
+          <tr><th>Top strap channel</th><td>Anchor strap, routed behind the headrest</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Specifications</h3>
+        <table>
+          <tr><th>Deployed</th><td>22" H × 15" W × 4" D <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Folded</th><td>15" × 4" × 2" <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Weight</th><td>~1.6 lb <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Shell</th><td>1680D ballistic nylon <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Lining</th><td>210D ripstop <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Webbing</th><td>1.5" polypropylene, cam-buckle <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Stitching</th><td>Box-stitched, all load points <span class="tbc">[TBC]</span></td></tr>
+          <tr><th>Installation</th><td>None</td></tr>
+        </table>
+        <div class="note"><h3 style="margin-bottom:8px">Fit</h3><p style="margin:0">Confirmed on Cascadia · 579 · T680 · VNL · LT. Needs a seat back at least 20" tall and 14" wide with clearance behind the headrest. Running something else? Measure. 30-day returns if it doesn't work.</p></div>
+      </div>
+    </div>
+    <p style="margin-top:32px"><a class="btn btn-primary" href="#offer">Get yours today — $54.99</a></p>
+  </div>
+</section>
+
+<!-- 6 WHY US -->
+<section class="dark">
+  <div class="wrap">
+    <h2>Why buy from us</h2>
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card"><h3>Built for the space, not the keyword</h3><p>Sized against real Class 8 cab dimensions. Every measurement published on this page so you can check before you buy.</p></div>
+      <div class="card"><h3>A real person answers</h3><p>Email support@<span class="tbc">[TBC]</span> and a human replies, usually within a few hours, always within a business day.</p></div>
+      <div class="card"><h3>Honest shipping</h3><p>Ships in <span class="tbc">[TBC]</span> business days, <span class="tbc">[TBC]</span> in transit. Free over $75. And if you're not going to be home — most of our customers aren't — ship it to a terminal or hold-for-pickup.</p></div>
+      <div class="card"><h3>30-day returns</h3><p>Doesn't fit, doesn't work? Send it back within 30 days, unused and in the packaging. <span class="tbc">[TBC: return shipping terms]</span></p></div>
+    </div>
+    <div class="note"><p style="margin:0">Secure checkout via Shopify Payments, Shop Pay, Apple Pay, Google Pay and PayPal. We never see or store your card details.</p></div>
+  </div>
+</section>
+
+<!-- 7 SOCIAL PROOF -->
+<section class="paper">
+  <div class="wrap">
+    <h2>Join the first drivers trying the CS-01.</h2>
+    <p class="lede">We launched this month. There are no reviews on this page because there are no reviews yet, and we're not going to invent any.</p>
+    <p class="lede">If you're one of the first, tell us what's wrong with it. We'd rather fix the product than pad the page.</p>
+    <p style="font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;margin-top:20px">— <span class="tbc">[FOUNDER FIRST NAME]</span>, ConvoySupply</p>
+    <div class="imgslot" style="margin-top:20px">LP-PROOF-01 — CS-01 on a bunk next to a coffee and a logbook. Real, unstyled.</div>
+  </div>
+</section>
+
+<!-- 8 OFFER -->
+<section class="light" id="offer">
+  <div class="wrap">
+    <h2>The offer</h2>
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card offer">
+        <h3>CS-01 alone</h3>
+        <p>The seat-back command center.</p>
+        <p class="price"><strong>$54.99</strong></p>
+        <a class="btn btn-primary" href="#">Add to cart — $54.99</a>
+        <p class="micro">Free shipping over $75 (add anything to qualify) · 30-day returns</p>
+      </div>
+      <div class="card offer flag">
+        <span class="flagtag">Most complete</span>
+        <h3>The Cab Reset Kit</h3>
+        <p>CS-01 Cab Command Organizer + CS-02 Bunk Shelf Net + CS-03 Manifest Folio.</p>
+        <p class="price"><s class="was">$112.97</s> <strong>$89.00</strong> <span class="save">Save $23.97</span></p>
+        <a class="btn btn-primary" href="#">Add the kit — $89.00</a>
+        <p class="micro">Free shipping · 30-day returns</p>
+      </div>
+    </div>
+    <div class="note"><p style="margin:0">The $23.97 is the real difference between the kit price and the three individual prices, which are what we actually charge for them. We don't mark anything up to discount it.</p></div>
+    <p style="margin-top:20px">Free US shipping over $75. Under that, $<span class="tbc">[TBC]</span> flat. Ships in <span class="tbc">[TBC]</span> business days. Terminal and hold-for-pickup delivery available — choose at checkout or email us first.</p>
+  </div>
+</section>
+
+<!-- 9 FAQ -->
+<section class="paper">
+  <div class="wrap" style="max-width:820px">
+    <h2>Questions</h2>
+    <details open><summary>Will it fit my truck?</summary><div class="ans"><p>Confirmed on Cascadia, 579, T680, VNL and LT. Needs a seat back at least 20" tall and 14" wide with clearance behind the headrest. Dimensions are in Section 5. Measure if you're unsure — 30-day returns either way.</p></div></details>
+    <details><summary>Do I have to install anything?</summary><div class="ans"><p>No. Two cam-buckle straps and an anchor strap. About two minutes, no tools. Nothing drilled or bolted.</p></div></details>
+    <details><summary>Will my carrier allow it in a company truck?</summary><div class="ans"><p>Nothing is modified, so there's nothing to ask about. It straps on and comes off.</p></div></details>
+    <details><summary>What's it made of?</summary><div class="ans"><p>1680D ballistic nylon shell, 210D ripstop lining, 1.5" polypropylene webbing, box-stitched at load points. <span class="tbc">[TBC — confirm against supplier spec sheet]</span></p></div></details>
+    <details><summary>How much will it hold?</summary><div class="ans"><p><span class="tbc">[TBC]</span> — publish no load rating until tested. If untested, the answer reads: "We haven't published a rated load because we haven't tested one properly. Load points are box-stitched. We'll publish a number once we've measured it."</p></div></details>
+    <details><summary>How long does shipping take?</summary><div class="ans"><p><span class="tbc">[TBC]</span> business days to ship, <span class="tbc">[TBC]</span> in transit via <span class="tbc">[TBC]</span>. Free over $75.</p></div></details>
+    <details><summary>I'm on the road — can I get it delivered somewhere useful?</summary><div class="ans"><p>Yes. Home address for when you're back, a terminal, or hold-for-pickup. Email before ordering if your route is complicated.</p></div></details>
+    <details><summary>What if I don't like it?</summary><div class="ans"><p>30 days, unused, in the packaging, refunded. <span class="tbc">[TBC: return shipping terms]</span></p></div></details>
+    <details><summary>Can I get this cheaper on Amazon?</summary><div class="ans"><p>Probably, and faster. What you'll get is a car organizer with truck keywords. Ours is sized for a Class 8 cab and the dimensions are published above. If speed matters more than fit, buy that one — we'd rather you were happy than out $55.</p></div></details>
+    <details><summary>How do I clean it?</summary><div class="ans"><p>Damp cloth, mild soap. Don't machine wash — it'll distort the panel.</p></div></details>
+    <details><summary>What payment methods do you take?</summary><div class="ans"><p>Card, Shop Pay, Apple Pay, Google Pay, PayPal.</p></div></details>
+    <details><summary>Is my payment secure?</summary><div class="ans"><p>Processed by Shopify Payments. We never see or store your card details.</p></div></details>
+  </div>
+</section>
+
+<!-- 10 FINAL CTA -->
+<section class="dark">
+  <div class="wrap" style="max-width:760px">
+    <div class="imgslot" style="margin-bottom:28px">LP-FINAL — the organized cab, low evening light, warm, quiet. The outcome, not the product.</div>
+    <h2>Squared away.</h2>
+    <p class="lede">Everything in its place. Nothing in your way. Two minutes to fit and nothing on your truck gets touched.</p>
+    <a class="btn btn-primary" href="#offer">Get yours today — $54.99</a>
+    <a class="btn btn-ghost" href="#offer">Or get the kit — $89.00</a>
+    <p class="micro">Free US shipping over $75 · 30-day returns · Ships to a terminal · A real person answers support@<span class="tbc">[TBC]</span></p>
+  </div>
+</section>
+
+<div class="footnote">
+  ConvoySupply — Squared away.<br>
+  Prototype for internal review. No live checkout. No reviews, timers, or stock counters appear anywhere by design.
+</div>
+
+<div class="sticky" id="sticky">
+  <div class="sticky-in">
+    <div><span class="sticky-name">CS-01 Organizer</span><span class="sticky-price">$54.99</span></div>
+    <a class="btn btn-primary" href="#offer">Get yours</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('sticky'),shown=false;
+  function check(){var past=window.scrollY>window.innerHeight*1.2;if(past!==shown){shown=past;bar.classList.toggle('on',past);}}
+  window.addEventListener('scroll',check,{passive:true});check();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "_comment": "ConvoySupply homepage. Section order and rationale: store/store-architecture.md. Copy: store/homepage-copy.md.",
+  "sections": {
+    "hero": {
+      "type": "cs-hero",
+      "settings": {
+        "eyebrow": "Purpose-built cab storage",
+        "heading": "Your passenger seat is not a shelf.",
+        "subheading": "A sleeper cab is a living space that ships with no storage. We make gear sized for the actual cab — no drilling, no tools, nothing modified.",
+        "cta_label": "Get the CS-01 — $54.99",
+        "cta_url": "/pages/cs-01",
+        "cta2_label": "See all four pieces",
+        "cta2_url": "/collections/all",
+        "microcopy": "Free US shipping over $75 · 30-day returns",
+        "image_alt": "Interior of a Class 8 sleeper cab at dawn with the CS-01 fitted to the passenger seat back",
+        "dark": false
+      }
+    },
+    "problem": {
+      "type": "cs-cards",
+      "blocks": {
+        "p1": { "type": "card", "settings": { "title": "The passenger seat pile", "text": "<p>Phone, water, gloves, clipboard, whatever you ate at 2am. It slides when you brake and it's buried by Thursday.</p>" } },
+        "p2": { "type": "card", "settings": { "title": "Storing things on your bed", "text": "<p>The wall next to your bunk is empty. Your mattress is where the bag goes. That's backwards.</p>" } },
+        "p3": { "type": "card", "settings": { "title": "Paperwork in a door pocket", "text": "<p>Logs, BOLs, permits, receipts. Creased, damp, and never where you left them.</p>" } }
+      },
+      "block_order": ["p1", "p2", "p3"],
+      "settings": {
+        "heading": "Everything you own lives in 60 square feet. None of it has a home.",
+        "body": "<p>Your truck was engineered to move freight. Nobody engineered it for the person living in it.</p><p>There's a bunk, a dash, and a couple of shallow cubbies. That's the storage. Everything else ends up on the passenger seat, on the bunk, or on the floor. Then you brake hard and half of it's in the footwell.</p>",
+        "columns": 3,
+        "numbered": false,
+        "dark": true
+      }
+    },
+    "featured": {
+      "type": "featured-product",
+      "settings": { "_comment": "Dawn native. Point at cs-01-cab-command-organizer." }
+    },
+    "benefits": {
+      "type": "cs-cards",
+      "blocks": {
+        "b1": { "type": "card", "settings": { "title": "Nothing moves under braking", "text": "<p>Loose gear gets secured. Elastic retention on the sleeves, deep pockets with defined positions.</p>" } },
+        "b2": { "type": "card", "settings": { "title": "You stop hunting", "text": "<p>Everything has one place. You stop losing twenty minutes a week to the same three items.</p>" } },
+        "b3": { "type": "card", "settings": { "title": "Nothing gets modified", "text": "<p>Straps, hangs, sits. No drilling, no bolts, no tools. Comes with you to the next truck.</p>" } },
+        "b4": { "type": "card", "settings": { "title": "Sized for your cab", "text": "<p>Designed against real Class 8 dimensions. Every measurement published — check before you buy.</p>" } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": { "heading": "What actually changes", "columns": 4, "dark": false }
+    },
+    "collection": {
+      "type": "featured-collection",
+      "settings": { "_comment": "Dawn native. Point at 'all'. Heading: Four pieces. One sorted cab." }
+    },
+    "why": {
+      "type": "cs-compare",
+      "blocks": {
+        "r1": { "type": "row", "settings": { "label": "Designed for", "v1": "Cars, sold for trucks", "v2": "Trucks", "v3": "Class 8 sleepers specifically" } },
+        "r2": { "type": "row", "settings": { "label": "Dimensions published", "v1": "Rarely", "v2": "Sometimes", "v3": "Always" } },
+        "r3": { "type": "row", "settings": { "label": "Installation", "v1": "Varies", "v2": "Often required", "v3": "None. Ever." } },
+        "r4": { "type": "row", "settings": { "label": "Sold as a system", "v1": "No", "v2": "No", "v3": "Yes — four zones" } },
+        "r5": { "type": "row", "settings": { "label": "Typical price", "v1": "$15–$40", "v2": "~$75.99", "v3": "$27.99–$54.99" } },
+        "r6": { "type": "row", "settings": { "label": "Reviews", "v1": "Volume, often manipulated", "v2": "Some", "v3": "None yet — we're new and we say so" } }
+      },
+      "block_order": ["r1", "r2", "r3", "r4", "r5", "r6"],
+      "settings": {
+        "heading": "Built for the cab, not the catalog",
+        "body": "<p>Most gear sold for trucks is a car product with truck keywords in the listing title. The straps don't reach. The pockets sag. It was designed for the back of a minivan seat.</p><p>We started from the cab. Every measurement is published so you can check it against your truck before you spend anything.</p>",
+        "col1": "Generic marketplace organizers",
+        "col2": "Specialty truck retail",
+        "col3": "ConvoySupply",
+        "footnote": "Specialty retail pricing observed at approximately $75.99 for comparable cab organizers."
+      }
+    },
+    "proof": {
+      "type": "cs-proof",
+      "settings": {
+        "empty_heading": "No reviews yet.",
+        "empty_body": "<p>We launched this month. We're not going to put fake reviews here, and we're not going to buy any. When we have real ones from real drivers, they'll go here — good and bad.</p><p>If you're one of the first people to try this, tell us what's wrong with it. We'd rather fix the product than pad the page.</p>",
+        "signature": "[FOUNDER FIRST NAME], ConvoySupply",
+        "dark": true
+      }
+    },
+    "how": {
+      "type": "cs-cards",
+      "blocks": {
+        "s1": { "type": "card", "settings": { "title": "Check the fit", "text": "<p>Every dimension is on the product page, plus a fit guide by truck model. Measure if you're running something unusual.</p>" } },
+        "s2": { "type": "card", "settings": { "title": "Order", "text": "<p>Free US shipping over $75. Ships in [TBC] business days, [TBC] days in transit.</p>" } },
+        "s3": { "type": "card", "settings": { "title": "Tell us where you'll be", "text": "<p>Home address for when you're back, a terminal, or hold-for-pickup. Not sure? Email before you order.</p>" } },
+        "s4": { "type": "card", "settings": { "title": "30 days to decide", "text": "<p>If it doesn't fit or doesn't work, send it back within 30 days. Unused and in the packaging.</p>" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {
+        "heading": "How this works",
+        "columns": 4,
+        "numbered": true,
+        "callout": "<p><strong>You're probably not home. We know.</strong> Most of our customers are 1,500 miles from their mailbox when the package lands. Tell us where you'll actually be and we'll work with it.</p>",
+        "dark": false
+      }
+    },
+    "kits": {
+      "type": "featured-collection",
+      "settings": { "_comment": "Dawn native. Point at 'kits'. Heading: Buy the set, save the difference." }
+    },
+    "faq": {
+      "type": "cs-faq",
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "Will it fit my truck?", "answer": "<p>Confirmed on Freightliner Cascadia, Peterbilt 579, Kenworth T680, Volvo VNL and International LT. Every dimension is published on each product page and there's a fit guide by model. Running something else? Measure your seat back. If it doesn't work, 30-day returns.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "Can I get this cheaper on Amazon?", "answer": "<p>Probably, and it'll get there faster. What you'll get is a car organizer with truck keywords in the title. Ours is sized for a Class 8 sleeper and the dimensions are published so you can check. If two-day shipping matters more than fit, buy the Amazon one — we'd rather you were happy than out $55.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Do I have to install anything?", "answer": "<p>No. Everything straps, hangs or sits. No drilling, no bolts, no tools. Nothing on your truck gets modified, which also means nothing to clear with your carrier.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "I'm never home to sign for a package.", "answer": "<p>Ship to your home address for whenever you get back, to a terminal, or to a hold-for-pickup location. If your route makes that complicated, email us before you order.</p>" } },
+        "q5": { "type": "qa", "settings": { "question": "How long does shipping take?", "answer": "<p>[TBC] business days to ship, then [TBC] days in transit via [TBC]. Free over $75, $[TBC] flat rate under. We'll give you a real number, not \"fast shipping.\"</p>" } },
+        "q6": { "type": "qa", "settings": { "question": "What if I don't like it?", "answer": "<p>Send it back within 30 days, unused and in the packaging, and we'll refund it. Return shipping is [TBC].</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "settings": { "heading": "Common questions", "open_first": true, "cta_label": "All questions", "cta_url": "/pages/faq" }
+    },
+    "guarantee": {
+      "type": "rich-text",
+      "settings": { "_comment": "Dawn native. Copy: store/homepage-copy.md §13 — '30 days. No argument.'" }
+    },
+    "final-cta": {
+      "type": "cs-cta",
+      "settings": {
+        "heading": "Squared away.",
+        "body": "<p>Four pieces. One sorted cab. Nothing drilled, nothing bolted, nothing modified.</p>",
+        "cta_label": "Get the Cab Reset Kit — $89",
+        "cta_url": "/products/cab-reset-kit",
+        "cta2_label": "Start with the CS-01 — $54.99",
+        "cta2_url": "/products/cs-01-cab-command-organizer",
+        "microcopy": "Free US shipping over $75 · 30-day returns · Real person on the other end of support@[TBC]",
+        "dark": true
+      }
+    }
+  },
+  "order": ["hero", "problem", "featured", "benefits", "collection", "why", "proof", "how", "kits", "faq", "guarantee", "final-cta"]
+}

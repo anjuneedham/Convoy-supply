@@ -1,0 +1,83 @@
+{%- comment -%}
+  ConvoySupply — social proof.
+
+  IMPORTANT: at launch the review blocks array is EMPTY and the honest
+  "no reviews yet" message renders. When genuine, verified reviews exist,
+  add them as blocks and the message hides automatically.
+
+  Do NOT add a block for a review that was not actually written by a real
+  customer about a real purchase. See brand/brand-copy.md compliance rule 1.
+{%- endcomment -%}
+<section class="cs-section {% if section.settings.dark %}cs-section--dark{% else %}cs-section--light{% endif %}">
+  <div class="cs-wrap">
+
+    {%- if section.blocks.size == 0 -%}
+      <div class="cs-proof__empty">
+        <h2 class="cs-h2">{{ section.settings.empty_heading }}</h2>
+        <div class="cs-body cs-lede">{{ section.settings.empty_body }}</div>
+        {%- if section.settings.signature != blank -%}
+          <p class="cs-proof__sig">— {{ section.settings.signature }}</p>
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      <h2 class="cs-h2">{{ section.settings.heading }}</h2>
+      <div class="cs-grid cs-grid--3" style="margin-top:32px">
+        {%- for block in section.blocks -%}
+          <blockquote class="cs-card cs-proof__quote" {{ block.shopify_attributes }}>
+            <p class="cs-body">{{ block.settings.quote }}</p>
+            <footer class="cs-micro">
+              {{ block.settings.name }}{% if block.settings.detail != blank %} · {{ block.settings.detail }}{% endif %}
+              {%- if block.settings.verified -%}<span class="cs-proof__verified">Verified purchase</span>{%- endif -%}
+            </footer>
+          </blockquote>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.image != blank -%}
+      <div class="cs-proof__media">
+        {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,900,1200', alt: section.settings.image_alt }}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .cs-proof__empty { max-width: 62ch; }
+  .cs-proof__sig { font-family: var(--cs-font-head); text-transform: uppercase; letter-spacing: .04em; margin-top: 20px; }
+  .cs-proof__quote { margin: 0; }
+  .cs-proof__verified { display: inline-block; margin-left: 8px; color: var(--cs-good); font-weight: 600; }
+  .cs-proof__media { margin-top: 36px; }
+  .cs-proof__media img { width: 100%; height: auto; border-radius: var(--cs-radius); }
+</style>
+
+{% schema %}
+{
+  "name": "CS Social proof",
+  "tag": "section",
+  "max_blocks": 9,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading (shown when reviews exist)", "default": "What drivers are saying" },
+    { "type": "text", "id": "empty_heading", "label": "Heading (no reviews yet)", "default": "No reviews yet." },
+    { "type": "richtext", "id": "empty_body", "label": "Body (no reviews yet)", "default": "<p>We launched this month. We're not going to put fake reviews here, and we're not going to buy any. When we have real ones from real drivers, they'll go here — good and bad.</p><p>If you're one of the first people to try this, tell us what's wrong with it. We'd rather fix the product than pad the page.</p>" },
+    { "type": "text", "id": "signature", "label": "Signature", "default": "[Founder first name], ConvoySupply" },
+    { "type": "image_picker", "id": "image", "label": "Supporting image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text" },
+    { "type": "checkbox", "id": "dark", "label": "Dark background", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Verified review",
+      "settings": [
+        { "type": "paragraph", "content": "Only add a block for a review genuinely written by a real customer about a real purchase. Fabricated reviews are prohibited brand-wide." },
+        { "type": "textarea", "id": "quote", "label": "Review text" },
+        { "type": "text", "id": "name", "label": "Reviewer name" },
+        { "type": "text", "id": "detail", "label": "Detail (e.g. 'Cascadia, OTR')" },
+        { "type": "checkbox", "id": "verified", "label": "Verified purchase", "default": true }
+      ]
+    }
+  ],
+  "presets": [{ "name": "CS Social proof" }]
+}
+{% endschema %}

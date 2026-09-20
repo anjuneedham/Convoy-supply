@@ -1,0 +1,74 @@
+{%- comment -%} ConvoySupply — FAQ with FAQPage structured data. Copy: store/homepage-copy.md §12 {%- endcomment -%}
+<section class="cs-section cs-section--paper">
+  <div class="cs-wrap cs-faq">
+    <h2 class="cs-h2">{{ section.settings.heading }}</h2>
+    <div class="cs-faq__list">
+      {%- for block in section.blocks -%}
+        <details class="cs-faq__item" {{ block.shopify_attributes }}{% if forloop.first and section.settings.open_first %} open{% endif %}>
+          <summary class="cs-faq__q">{{ block.settings.question }}</summary>
+          <div class="cs-faq__a cs-body">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.cta_label != blank -%}
+      <p style="margin-top:28px"><a class="cs-btn cs-btn--ghost" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a></p>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- if section.blocks.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in section.blocks -%}
+    {
+      "@type": "Question",
+      "name": {{ block.settings.question | json }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | strip_html | json }} }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+<style>
+  .cs-faq { max-width: 820px; }
+  .cs-faq__item { border-bottom: 1px solid var(--cs-line); }
+  .cs-faq__q {
+    font-family: var(--cs-font-head); font-weight: 600; text-transform: uppercase;
+    font-size: 1.05rem; letter-spacing: .02em; padding: 18px 32px 18px 0;
+    cursor: pointer; list-style: none; position: relative;
+  }
+  .cs-faq__q::-webkit-details-marker { display: none; }
+  .cs-faq__q::after { content: "+"; position: absolute; right: 4px; top: 16px; font-size: 1.5rem; color: var(--cs-hiviz-dk); }
+  .cs-faq__item[open] .cs-faq__q::after { content: "–"; }
+  .cs-faq__a { padding: 0 0 20px; }
+</style>
+
+{% schema %}
+{
+  "name": "CS FAQ",
+  "tag": "section",
+  "max_blocks": 20,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Common questions" },
+    { "type": "checkbox", "id": "open_first", "label": "Open the first question by default", "default": true },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "All questions" },
+    { "type": "url", "id": "cta_url", "label": "CTA link" }
+  ],
+  "blocks": [
+    {
+      "type": "qa",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Will it fit my truck?" },
+        { "type": "richtext", "id": "answer", "label": "Answer" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "CS FAQ", "blocks": [{ "type": "qa" }, { "type": "qa" }, { "type": "qa" }] }]
+}
+{% endschema %}

@@ -1,0 +1,153 @@
+{
+  "_comment": "ConvoySupply CS-01 funnel landing page. Paid traffic destination. Full copy and rationale: store/landing-page.md. Header nav and footer nav must be suppressed on this template.",
+  "sections": {
+    "s1-hook": {
+      "type": "cs-hero",
+      "settings": {
+        "eyebrow": "For OTR drivers · CS-01 Cab Command Organizer",
+        "heading": "Still throwing everything on the passenger seat?",
+        "subheading": "Meet the CS-01 — a seat-back command center sized for a Class 8 sleeper, so every daily-use item has one place and stays there when you brake.",
+        "cta_label": "Get yours today — $54.99",
+        "cta_url": "#offer",
+        "microcopy": "Free US shipping over $75 · 30-day returns · No drilling, no tools",
+        "image_alt": "Split frame of the same sleeper cab passenger seat: cluttered on the left, organized with the CS-01 on the right",
+        "dark": false
+      }
+    },
+    "s2-problem": {
+      "type": "cs-cards",
+      "blocks": {
+        "a": { "type": "card", "settings": { "title": "It slides", "text": "<p>Every hard stop redistributes everything onto the floor.</p>" } },
+        "b": { "type": "card", "settings": { "title": "It's buried", "text": "<p>Whatever you need is under whatever you don't.</p>" } },
+        "c": { "type": "card", "settings": { "title": "It's not yours", "text": "<p>Your $180,000 truck and you've got nowhere to put a pair of gloves.</p>" } }
+      },
+      "block_order": ["a", "b", "c"],
+      "settings": {
+        "heading": "You know exactly where this is.",
+        "body": "<p>It starts with a phone and a water bottle. By Wednesday it's a clipboard, two chargers, gloves, a flashlight, a jacket, and whatever you ate at 2am.</p><p>You brake for a four-wheeler and half of it's in the footwell. You know it's in here somewhere. You've been looking for four minutes. You're due at a dock in twenty.</p>",
+        "columns": 3,
+        "callout": "<p>Nobody designed this space for a person. It was designed to move freight, and you were an afterthought.</p>",
+        "dark": true
+      }
+    },
+    "s3-solution": {
+      "type": "cs-cards",
+      "blocks": {
+        "a": { "type": "card", "settings": { "title": "What it does", "text": "<p>Straps to the passenger seat back. Deep bottom pockets for bulk. Elastic sleeves for cables, tools and a flashlight. A padded slot for a tablet. A flat document pocket that fits a clipboard without folding it.</p>" } },
+        "b": { "type": "card", "settings": { "title": "How it works", "text": "<p>Two cam-buckle straps over the seat back, one anchor strap behind the headrest. About two minutes. No tools. Nothing modified — so nothing to clear with your carrier, and it comes with you to the next truck.</p>" } },
+        "c": { "type": "card", "settings": { "title": "Why it's different", "text": "<p>Almost everything sold for this is a car organizer with truck keywords. The straps don't reach a Class 8 seat and the panel sags the moment you load it. The CS-01 was sized against real cab dimensions and box-stitched at every load point.</p>" } }
+      },
+      "block_order": ["a", "b", "c"],
+      "settings": { "heading": "The CS-01 gives all of it one place.", "columns": 3, "dark": false }
+    },
+    "s4-benefits": {
+      "type": "cs-cards",
+      "blocks": {
+        "a": { "type": "card", "settings": { "title": "Nothing moves when you brake", "text": "<p>Defined pockets and elastic retention. Gear stays where you put it.</p>" } },
+        "b": { "type": "card", "settings": { "title": "You stop hunting", "text": "<p>One place for everything. No more four-minute searches for the same three items.</p>" } },
+        "c": { "type": "card", "settings": { "title": "You get the seat back", "text": "<p>The passenger seat becomes a seat again.</p>" } },
+        "d": { "type": "card", "settings": { "title": "Everything in reach", "text": "<p>Positioned so you reach it from the driver's seat without twisting or unbuckling.</p>" } },
+        "e": { "type": "card", "settings": { "title": "Two minutes to fit", "text": "<p>Straps on, straps off. No tools, nothing modified, no permission needed.</p>" } },
+        "f": { "type": "card", "settings": { "title": "Sized for your cab", "text": "<p>Designed against Class 8 dimensions. Every measurement published.</p>" } }
+      },
+      "block_order": ["a", "b", "c", "d", "e", "f"],
+      "settings": { "heading": "What actually changes", "columns": 3, "cta_label": "Get yours today — $54.99", "cta_url": "#offer", "dark": false }
+    },
+    "s5-demo": {
+      "type": "cs-specs",
+      "blocks": {
+        "d1": { "type": "spec", "settings": { "label": "Deployed", "value": "22\" H × 15\" W × 4\" D [TBC]" } },
+        "d2": { "type": "spec", "settings": { "label": "Folded", "value": "15\" × 4\" × 2\" [TBC]" } },
+        "d3": { "type": "spec", "settings": { "label": "Weight", "value": "~1.6 lb [TBC]" } },
+        "d4": { "type": "spec", "settings": { "label": "Shell", "value": "1680D ballistic nylon [TBC]" } },
+        "d5": { "type": "spec", "settings": { "label": "Lining", "value": "210D ripstop [TBC]" } },
+        "d6": { "type": "spec", "settings": { "label": "Webbing", "value": "1.5\" polypropylene, cam-buckle [TBC]" } },
+        "d7": { "type": "spec", "settings": { "label": "Stitching", "value": "Box-stitched, all load points [TBC]" } },
+        "d8": { "type": "spec", "settings": { "label": "Installation", "value": "None" } }
+      },
+      "block_order": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8"],
+      "settings": {
+        "eyebrow": "Section 5",
+        "heading": "How it's built and where everything goes",
+        "included": "<p>1 × CS-01 · 2 × adjustable seat-back straps · 1 × anchor strap · fit card</p>",
+        "image_alt": "Annotated diagram of the CS-01 showing each pocket and its dimensions",
+        "fit_note": "<p>Confirmed on Cascadia · 579 · T680 · VNL · LT. Needs a seat back at least 20\" tall and 14\" wide with clearance behind the headrest. Running something else? Measure. 30-day returns if it doesn't work.</p>"
+      }
+    },
+    "s6-why": {
+      "type": "cs-cards",
+      "blocks": {
+        "a": { "type": "card", "settings": { "title": "Built for the space, not the keyword", "text": "<p>Sized against real Class 8 cab dimensions. Every measurement published on this page so you can check before you buy.</p>" } },
+        "b": { "type": "card", "settings": { "title": "A real person answers", "text": "<p>Email support@[TBC] and a human replies, usually within a few hours, always within a business day.</p>" } },
+        "c": { "type": "card", "settings": { "title": "Honest shipping", "text": "<p>Ships in [TBC] business days, [TBC] in transit. Free over $75. And if you're not going to be home — most of our customers aren't — ship it to a terminal or hold-for-pickup.</p>" } },
+        "d": { "type": "card", "settings": { "title": "30-day returns", "text": "<p>Doesn't fit, doesn't work? Send it back within 30 days, unused and in the packaging. [TBC: return shipping terms]</p>" } }
+      },
+      "block_order": ["a", "b", "c", "d"],
+      "settings": {
+        "heading": "Why buy from us",
+        "columns": 4,
+        "callout": "<p>Secure checkout via Shopify Payments, Shop Pay, Apple Pay, Google Pay and PayPal. We never see or store your card details.</p>",
+        "dark": true
+      }
+    },
+    "s7-proof": {
+      "type": "cs-proof",
+      "settings": {
+        "empty_heading": "Join the first drivers trying the CS-01.",
+        "empty_body": "<p>We launched this month. There are no reviews on this page because there are no reviews yet, and we're not going to invent any.</p><p>If you're one of the first, tell us what's wrong with it. We'd rather fix the product than pad the page.</p>",
+        "signature": "[FOUNDER FIRST NAME], ConvoySupply",
+        "dark": false
+      }
+    },
+    "s8-offer": {
+      "type": "cs-offer",
+      "blocks": {
+        "single": { "type": "option", "settings": { "title": "CS-01 alone", "contents": "<p>The seat-back command center.</p>", "cta_label": "Add to cart", "note": "Free shipping over $75 (add anything to qualify) · 30-day returns" } },
+        "kit": { "type": "option", "settings": { "title": "The Cab Reset Kit", "contents": "<p>CS-01 Cab Command Organizer + CS-02 Bunk Shelf Net + CS-03 Manifest Folio. Individually $112.97.</p>", "flag": "Most complete", "cta_label": "Add the kit", "note": "Free shipping · 30-day returns" } }
+      },
+      "block_order": ["single", "kit"],
+      "settings": {
+        "heading": "The offer",
+        "honesty_note": "<p>The $23.97 is the real difference between the kit price and the three individual prices, which are what we actually charge for them. We don't mark anything up to discount it.</p>",
+        "shipping_note": "<p>Free US shipping over $75. Under that, $[TBC] flat. Ships in [TBC] business days. Terminal and hold-for-pickup delivery available — choose at checkout or email us first.</p>"
+      }
+    },
+    "s9-faq": {
+      "type": "cs-faq",
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "Will it fit my truck?", "answer": "<p>Confirmed on Cascadia, 579, T680, VNL and LT. Needs a seat back at least 20\" tall and 14\" wide with clearance behind the headrest. Dimensions are in Section 5. Measure if you're unsure — 30-day returns either way.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "Do I have to install anything?", "answer": "<p>No. Two cam-buckle straps and an anchor strap. About two minutes, no tools. Nothing drilled or bolted.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Will my carrier allow it in a company truck?", "answer": "<p>Nothing is modified, so there's nothing to ask about. It straps on and comes off.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "What's it made of?", "answer": "<p>1680D ballistic nylon shell, 210D ripstop lining, 1.5\" polypropylene webbing, box-stitched at load points. [TBC — confirm against supplier spec sheet]</p>" } },
+        "q5": { "type": "qa", "settings": { "question": "How much will it hold?", "answer": "<p>[TBC — publish no load rating until tested. If untested: \"We haven't published a rated load because we haven't tested one properly. Load points are box-stitched. We'll publish a number once we've measured it.\"]</p>" } },
+        "q6": { "type": "qa", "settings": { "question": "How long does shipping take?", "answer": "<p>[TBC] business days to ship, [TBC] in transit via [TBC]. Free over $75.</p>" } },
+        "q7": { "type": "qa", "settings": { "question": "I'm on the road — can I get it delivered somewhere useful?", "answer": "<p>Yes. Home address for when you're back, a terminal, or hold-for-pickup. Email before ordering if your route is complicated.</p>" } },
+        "q8": { "type": "qa", "settings": { "question": "What if I don't like it?", "answer": "<p>30 days, unused, in the packaging, refunded. [TBC: return shipping terms]</p>" } },
+        "q9": { "type": "qa", "settings": { "question": "Can I get this cheaper on Amazon?", "answer": "<p>Probably, and faster. What you'll get is a car organizer with truck keywords. Ours is sized for a Class 8 cab and the dimensions are published above. If speed matters more than fit, buy that one — we'd rather you were happy than out $55.</p>" } },
+        "q10": { "type": "qa", "settings": { "question": "How do I clean it?", "answer": "<p>Damp cloth, mild soap. Don't machine wash — it'll distort the panel.</p>" } },
+        "q11": { "type": "qa", "settings": { "question": "What payment methods do you take?", "answer": "<p>Card, Shop Pay, Apple Pay, Google Pay, PayPal.</p>" } },
+        "q12": { "type": "qa", "settings": { "question": "Is my payment secure?", "answer": "<p>Processed by Shopify Payments. We never see or store your card details.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"],
+      "settings": { "heading": "Questions", "open_first": true }
+    },
+    "s10-final": {
+      "type": "cs-cta",
+      "settings": {
+        "heading": "Squared away.",
+        "body": "<p>Everything in its place. Nothing in your way. Two minutes to fit and nothing on your truck gets touched.</p>",
+        "cta_label": "Get yours today — $54.99",
+        "cta_url": "#offer",
+        "cta2_label": "Or get the kit — $89.00",
+        "cta2_url": "#offer",
+        "microcopy": "Free US shipping over $75 · 30-day returns · Ships to a terminal · A real person answers support@[TBC]",
+        "dark": true
+      }
+    },
+    "sticky": {
+      "type": "cs-sticky-cta",
+      "settings": { "short_name": "CS-01 Organizer", "cta_label": "Get yours" }
+    }
+  },
+  "order": ["s1-hook", "s2-problem", "s3-solution", "s4-benefits", "s5-demo", "s6-why", "s7-proof", "s8-offer", "s9-faq", "s10-final", "sticky"]
+}

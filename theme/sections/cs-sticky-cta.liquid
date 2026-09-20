@@ -1,0 +1,65 @@
+{%- comment -%}
+  ConvoySupply — sticky mobile add-to-cart bar for the landing page.
+  Appears once the visitor scrolls past the fold. Mobile only.
+  No timers, no scarcity — just the price and the button.
+{%- endcomment -%}
+{%- assign p = section.settings.product -%}
+{%- if p != blank and p.available -%}
+<div class="cs-sticky" id="cs-sticky" hidden>
+  <div class="cs-sticky__inner">
+    <div class="cs-sticky__info">
+      <span class="cs-sticky__name">{{ section.settings.short_name | default: p.title }}</span>
+      <span class="cs-sticky__price">{{ p.price | money }}</span>
+    </div>
+    {% form 'product', p %}
+      <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
+      <button type="submit" class="cs-btn cs-btn--primary cs-sticky__btn">{{ section.settings.cta_label }}</button>
+    {% endform %}
+  </div>
+</div>
+
+<style>
+  .cs-sticky {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: var(--cs-asphalt); color: var(--cs-concrete);
+    border-top: 2px solid var(--cs-hiviz); padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  }
+  .cs-sticky[hidden] { display: none; }
+  .cs-sticky__inner { display: flex; align-items: center; gap: 12px; max-width: var(--cs-max); margin: 0 auto; }
+  .cs-sticky__info { display: flex; flex-direction: column; line-height: 1.2; }
+  .cs-sticky__name { font-family: var(--cs-font-head); text-transform: uppercase; font-size: .9rem; }
+  .cs-sticky__price { font-family: var(--cs-font-mono); font-size: 1.05rem; }
+  .cs-sticky__btn { flex: 1; padding: 13px 16px; font-size: .95rem; }
+  .cs-sticky form { flex: 1; margin: 0; }
+  @media (min-width: 750px) { .cs-sticky { display: none !important; } }
+</style>
+
+<script>
+  (function () {
+    var bar = document.getElementById('cs-sticky');
+    if (!bar) return;
+    var threshold = window.innerHeight * 1.2;
+    var shown = false;
+    function check() {
+      var past = window.scrollY > threshold;
+      if (past !== shown) { shown = past; bar.hidden = !past; }
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CS Sticky CTA",
+  "tag": "div",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "text", "id": "short_name", "label": "Short name", "default": "CS-01 Organizer" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Get yours" }
+  ],
+  "presets": [{ "name": "CS Sticky CTA" }]
+}
+{% endschema %}

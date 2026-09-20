@@ -1,0 +1,70 @@
+{%- comment -%} ConvoySupply — Hero. Problem-first. Copy: store/homepage-copy.md §3 {%- endcomment -%}
+<section class="cs-section cs-hero {% if section.settings.dark %}cs-section--dark{% else %}cs-section--paper{% endif %}">
+  <div class="cs-wrap cs-hero__inner">
+    <div class="cs-hero__text">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="cs-eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h1 class="cs-h1">{{ section.settings.heading }}</h1>
+      {%- if section.settings.subheading != blank -%}
+        <p class="cs-lede">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+      <div class="cs-hero__ctas">
+        {%- if section.settings.cta_label != blank -%}
+          <a class="cs-btn cs-btn--primary" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+        {%- endif -%}
+        {%- if section.settings.cta2_label != blank -%}
+          <a class="cs-btn cs-btn--ghost" href="{{ section.settings.cta2_url }}">{{ section.settings.cta2_label }}</a>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.microcopy != blank -%}
+        <p class="cs-micro">{{ section.settings.microcopy }}</p>
+      {%- endif -%}
+    </div>
+    <div class="cs-hero__media">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image
+           | image_url: width: 1400
+           | image_tag:
+               loading: 'eager',
+               fetchpriority: 'high',
+               sizes: '(min-width: 900px) 50vw, 100vw',
+               widths: '600,900,1200,1400',
+               alt: section.settings.image_alt }}
+      {%- else -%}
+        <div class="cs-hero__placeholder">{{ 'image' | placeholder_svg_tag }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cs-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .cs-hero__media img { width: 100%; height: auto; display: block; border-radius: var(--cs-radius); }
+  .cs-hero__placeholder { background: var(--cs-line); aspect-ratio: 4/3; }
+  @media (max-width: 899px) {
+    .cs-hero__inner { grid-template-columns: 1fr; gap: 28px; }
+    .cs-hero__media { order: -1; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "CS Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Purpose-built cab storage" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your passenger seat is not a shelf." },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "A sleeper cab is a living space that ships with no storage. We make gear sized for the actual cab — no drilling, no tools, nothing modified." },
+    { "type": "text", "id": "cta_label", "label": "Primary CTA label", "default": "Get the CS-01 — $54.99" },
+    { "type": "url", "id": "cta_url", "label": "Primary CTA link" },
+    { "type": "text", "id": "cta2_label", "label": "Secondary CTA label", "default": "See all four pieces" },
+    { "type": "url", "id": "cta2_url", "label": "Secondary CTA link" },
+    { "type": "text", "id": "microcopy", "label": "Microcopy under CTA", "default": "Free US shipping over $75 · 30-day returns" },
+    { "type": "image_picker", "id": "image", "label": "Hero image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text", "default": "Organized sleeper cab interior with the CS-01 fitted to the passenger seat back" },
+    { "type": "checkbox", "id": "dark", "label": "Dark background", "default": false }
+  ],
+  "presets": [{ "name": "CS Hero" }]
+}
+{% endschema %}

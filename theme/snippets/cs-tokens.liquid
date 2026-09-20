@@ -1,0 +1,103 @@
+{%- comment -%}
+  ConvoySupply design tokens.
+  Render once in theme.liquid <head>: {% render 'cs-tokens' %}
+  Values come from brand/brand-strategy.md — change them there first.
+{%- endcomment -%}
+<style>
+  :root {
+    --cs-asphalt:  #1C1F21;
+    --cs-steel:    #3A4247;
+    --cs-hiviz:    #E8B23A;
+    --cs-hiviz-dk: #C9962A;
+    --cs-concrete: #EDEBE7;
+    --cs-paper:    #FAF9F7;
+    --cs-line:     #C9C5BE;
+    --cs-ink:      #14171A;
+    --cs-mute:     #6B7075;
+    --cs-good:     #3F7D5C;
+    --cs-warn:     #B3502B;
+
+    --cs-font-head: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+    --cs-font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --cs-font-mono: 'Roboto Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --cs-radius: 2px;
+    --cs-gutter: 16px;
+    --cs-max: 1180px;
+  }
+
+  .cs-section { padding: 64px 0; }
+  .cs-section--tight { padding: 40px 0; }
+  .cs-section--dark { background: var(--cs-asphalt); color: var(--cs-concrete); }
+  .cs-section--light { background: var(--cs-concrete); color: var(--cs-ink); }
+  .cs-section--paper { background: var(--cs-paper); color: var(--cs-ink); }
+
+  .cs-wrap { max-width: var(--cs-max); margin: 0 auto; padding: 0 var(--cs-gutter); }
+
+  .cs-eyebrow {
+    font-family: var(--cs-font-mono);
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--cs-hiviz-dk); margin: 0 0 12px;
+  }
+  .cs-section--dark .cs-eyebrow { color: var(--cs-hiviz); }
+
+  .cs-h1, .cs-h2 {
+    font-family: var(--cs-font-head); font-weight: 700;
+    text-transform: uppercase; line-height: 1.02; letter-spacing: -.01em;
+    margin: 0 0 16px; text-wrap: balance;
+  }
+  .cs-h1 { font-size: clamp(2.1rem, 7vw, 4rem); }
+  .cs-h2 { font-size: clamp(1.6rem, 4.5vw, 2.6rem); }
+  .cs-h3 {
+    font-family: var(--cs-font-head); font-weight: 600; text-transform: uppercase;
+    font-size: 1.1rem; letter-spacing: .02em; margin: 0 0 8px;
+  }
+  .cs-lede  { font-size: clamp(1rem, 2.2vw, 1.2rem); line-height: 1.55; max-width: 62ch; margin: 0 0 24px; }
+  .cs-body  { line-height: 1.65; max-width: 68ch; }
+  .cs-micro { font-size: .8rem; color: var(--cs-mute); margin-top: 12px; }
+  .cs-section--dark .cs-micro { color: var(--cs-line); }
+
+  .cs-btn {
+    display: inline-block; font-family: var(--cs-font-head); font-weight: 700;
+    text-transform: uppercase; letter-spacing: .04em; font-size: 1.05rem;
+    padding: 16px 32px; border-radius: var(--cs-radius); border: 2px solid transparent;
+    text-decoration: none; cursor: pointer; transition: background .15s, color .15s;
+  }
+  .cs-btn--primary { background: var(--cs-hiviz); color: var(--cs-asphalt); }
+  .cs-btn--primary:hover { background: var(--cs-hiviz-dk); }
+  .cs-btn--ghost { background: transparent; color: currentColor; border-color: currentColor; }
+  .cs-btn--ghost:hover { background: currentColor; color: var(--cs-asphalt); }
+  .cs-btn + .cs-btn { margin-left: 12px; }
+
+  .cs-grid { display: grid; gap: 28px; }
+  .cs-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .cs-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .cs-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 899px) { .cs-grid--3, .cs-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 599px) {
+    .cs-grid--2, .cs-grid--3, .cs-grid--4 { grid-template-columns: 1fr; }
+    .cs-btn { display: block; text-align: center; }
+    .cs-btn + .cs-btn { margin: 12px 0 0; }
+    .cs-section { padding: 44px 0; }
+  }
+
+  .cs-card { background: var(--cs-paper); border: 1px solid var(--cs-line); border-radius: var(--cs-radius); padding: 24px; }
+  .cs-section--dark .cs-card { background: var(--cs-steel); border-color: #4A5359; }
+  .cs-card img { width: 100%; height: auto; display: block; margin: 0 0 16px; border-radius: var(--cs-radius); }
+
+  .cs-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .cs-table th, .cs-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--cs-line); }
+  .cs-table th { font-family: var(--cs-font-head); text-transform: uppercase; letter-spacing: .03em; }
+  .cs-table td:last-child, .cs-table th:last-child { font-family: var(--cs-font-mono); font-size: .86rem; }
+  .cs-table .cs-col-us { background: rgba(232,178,58,.12); font-weight: 600; }
+
+  .cs-trust { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .86rem; color: var(--cs-mute); margin-top: 16px; }
+  .cs-trust span::before { content: "✓ "; color: var(--cs-good); font-weight: 700; }
+
+  .cs-note {
+    border-left: 3px solid var(--cs-hiviz); padding: 16px 20px;
+    background: rgba(232,178,58,.08); border-radius: var(--cs-radius);
+  }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
