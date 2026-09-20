@@ -79,7 +79,7 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 ---
 
 ## DEC-006 — Small inventory buy, not dropship
-**2026-09-20 · ACTIVE**
+**2026-09-20 · SUPERSEDED by DEC-013**
 
 **Decision:** Hold 10–15 units each of CS-01 and CS-02 (~$300 **[A]**). CS-03 and CS-04 listed as made-to-order with an honest ship date until demand is proven.
 
@@ -88,6 +88,8 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 **Alternatives considered:** Full dropship — rejected, slow shipping undermines the whole offer. Large inventory buy — rejected, too much capital before evidence.
 
 **Reverses if:** Landed cost or MOQ makes a small buy impossible, or a supplier offers genuinely fast blind dropshipping under 5 days.
+
+**Superseded:** Speed to launch was prioritized over the shipping-speed disadvantage. See DEC-013.
 
 ---
 
@@ -161,15 +163,35 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 
 ---
 
+## DEC-013 — Dropship via DSers + AliExpress, not supplier-vetted inventory
+**2026-09-20 · ACTIVE**
+
+**Decision:** Launch on **DSers** (free Shopify app) sourcing generic equivalents of CS-01–CS-04 from **AliExpress**. No upfront inventory purchase, no multi-supplier RFQ cycle, no sample-evaluation gate before launch. One quality-control sample per SKU is ordered for the founder's own review, in parallel with store setup, not as a blocking gate.
+
+**Rationale:** The Day 1–5 supplier RFQ process (`decisions.md` DEC-006, `execution/day-1-supplier-launch.md`) trades speed for supplier-quality certainty the business doesn't have evidence it needs yet. Nothing has sold. DSers is the official free Shopify-AliExpress integration — no monthly fee at this volume, no MOQ, products can be imported and listed same-day. This converts the biggest bottleneck in the 30-day plan (7–14 day supplier lead time before any store work could reasonably start) into same-day product listing.
+
+**What this costs us:**
+- **Landed cost per unit is higher** than a bulk-negotiated supplier quote would be — AliExpress dropship pricing has no MOQ discount built in. Contribution margin in `finance/unit-economics.md` will compress; re-run the model against real DSers per-unit prices before setting final retail prices.
+- **Shipping time to customer is 12–25 days** on standard AliExpress shipping, materially slower than the "ships in 2–3 days" framing used elsewhere in this repo. PDP and checkout copy must state real ship times — this is a DEC-003 (no dark patterns) requirement, not optional.
+- **No control over packaging** unless a specific AliExpress supplier explicitly offers no-branding / private packaging — check this per-supplier inside DSers before importing.
+- **Product match quality is unverified** — DSers products are generic equivalents (car seat-back organizer, cargo net, document organizer, duffel), not the exact spec'd CS-01–CS-04 (1680D ballistic nylon, named truck-model fit, etc.). Marketing copy must not claim specs the actual sourced product doesn't have.
+
+**Alternatives considered:** Continue the 5-supplier RFQ (DEC-006) — rejected for this decision, too slow for the founder's stated priority. Zendrop or Spocket — rejected as primary; both have effectively-required paid tiers ($27–$39/mo+) for the product variety needed, where DSers' free tier covers this catalog size. CJdropshipping — kept as a **fallback**, not primary: also free, and better suited if a specific SKU (especially CS-01, the hero) needs private-label branding or can't be found generic on AliExpress.
+
+**Reverses if:** Real sales volume justifies moving CS-01 (and/or CS-02) to a vetted bulk supplier for better margin and faster shipping — this is the natural DEC-006 path once demand is proven, not before.
+
+---
+
 ## Open decisions
 
 | # | Question | Needs | When |
 |---|---|---|---|
-| OPEN-01 | Which supplier? | Three quotes per SKU | Day 5 |
-| OPEN-02 | Who pays return shipping? | Margin model + return-rate estimate | Before publishing the returns policy |
+| ~~OPEN-01~~ | ~~Which supplier?~~ | **Resolved by DEC-013** — DSers/AliExpress, no single supplier selection needed | — |
+| OPEN-02 | Who pays return shipping? | Margin model + return-rate estimate. Note: most AliExpress dropship suppliers do not accept returns — refund-only policy likely required | Before publishing the returns policy |
 | OPEN-03 | Business entity — sole proprietor or LLC? | Liability view, especially if CS-05 ever launches | Before first sale |
-| OPEN-04 | Fulfillment — self-ship or 3PL? | Volume estimate | Day 5 |
+| ~~OPEN-04~~ | ~~Fulfillment — self-ship or 3PL?~~ | **Resolved by DEC-013** — dropship, supplier ships direct to customer | — |
 | OPEN-05 | Marketplace price parity with the site? | Test data | After 2 weeks live |
 | OPEN-06 | Annual or monthly Shopify billing? | Confidence in continuing past month 1 | Day 30 |
+| OPEN-07 | Which AliExpress supplier per SKU inside DSers? | Compare 3-5 listings per product on: rating, order count, ship-from location (US warehouse if available), no-branding option | Day 1-2 |
 
 **Reference tags [V2], [H] are defined in `research/niche-analysis.md` and `research/customer-avatar.md`.**
