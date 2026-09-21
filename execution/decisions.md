@@ -210,6 +210,19 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 
 ---
 
+## DEC-015 — CS-04 launched below the 45% margin floor
+**2026-09-21 · ACTIVE**
+
+**Decision:** CS-04 (Haul Bag) is listed at **$49.00** against a real CJdropshipping landed cost of **$32.81** ($10.28 product + $22.53 shipping), producing a contribution margin of **~37.0%** — below the 45% floor set in `research/selected-niche.md` failure condition 5.
+
+**Rationale:** Founder chose to accept the thinner margin rather than keep searching for a cheaper/lighter duffel or raise the price further, prioritizing getting the full 4-SKU catalog live today. All four SKUs sourced via CJdropshipping in a single session: CS-01 ($50, 46.2%), CS-02 ($29.99, 69.8%), CS-03 ($27.99, 80.4%), CS-04 ($49, 37.0%).
+
+**What this means in practice:** CS-04 makes real but thin money per order (~$18 contribution) and cannot absorb a high CPA — do not spend meaningfully on ads targeting CS-04 as a standalone item. It still works as a **bundle component** (Full Rig Kit) where CS-01/02/03's stronger margins carry the blended average.
+
+**Reverses if:** A cheaper/lighter duffel listing is found later (weight is the driver of the $22.53 shipping cost), or CS-04 is dropped from standalone ad campaigns in favor of bundle-only distribution.
+
+---
+
 ## Open decisions
 
 | # | Question | Needs | When |
