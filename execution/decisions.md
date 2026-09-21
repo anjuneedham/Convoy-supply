@@ -182,6 +182,34 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 
 ---
 
+## DEC-014 — Channel sequencing: Google first, then scale to Facebook and TikTok
+**2026-09-21 · ACTIVE**
+
+**Decision:** Launch paid acquisition on **Google** (Search + Shopping) first. Once Google traffic validates the offer (real orders, acceptable CPA against `finance/unit-economics.md`), add **Facebook**, then **TikTok** as scale channels. This changes the channel order from the original plan, which opened on Meta only (DEC-007's three ad sets).
+
+**Rationale:** Google Search/Shopping captures existing purchase intent — someone searching "truck cab organizer" is closer to buying than someone scrolled past a Facebook ad. Starting there validates the offer against warmer traffic before spending on cold-audience Meta/TikTok testing. Facebook and TikTok remain the scale channels once Google proves the funnel converts, per the original DEC-005 gate (retargeting/scale waits on real traffic evidence).
+
+**What does not change:** DEC-007's three-ad-set testing structure (Broad / Interest / Advantage+) still applies **once Meta launches** — it just launches second, not first. DEC-005 (retargeting gated behind 1,000+ LPVs and 50+ ATCs) still applies within each platform.
+
+**Action needed:** Set up Google Ads account and Merchant Center (for Shopping) in parallel with the remaining product sourcing. Google Shopping specifically needs a working, published product feed — so this cannot start until the DSers/CJdropshipping product listings (CS-01–CS-04) are live and priced on Shopify.
+
+**Reverses if:** Google CPA/CPC data suggests search intent doesn't exist for this product category (unlikely for branded organizer terms, more of a risk for generic terms) — then move Meta up in sequence.
+
+---
+
+## OPEN-08 — Atlas AI website tool: Shopify-compatible or replacement?
+**Flagged 2026-09-21**
+
+**Question:** Does Atlas AI build on top of the existing Shopify store (keeping DSers/CJdropshipping product sync working) or does it replace Shopify as the storefront platform?
+
+**Why it matters:** All sourcing work done today (CS-01, CS-02 listed via CJdropshipping) pushes products into **Shopify** specifically. If Atlas AI is a separate website builder, those integrations don't carry over — products would need to be manually re-listed or a different dropship-to-website pipeline set up. DEC-008 (Dawn theme, zero apps) and the store-build phase in `execution/30-day-plan.md` also assume Shopify.
+
+**Needs:** Confirmation of what Atlas AI actually is and whether it sits on Shopify's checkout/backend or is a standalone platform.
+
+**When:** Before Phase 4 (store build) proceeds much further.
+
+---
+
 ## Open decisions
 
 | # | Question | Needs | When |

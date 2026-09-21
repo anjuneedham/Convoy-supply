@@ -144,6 +144,8 @@ Placeholder images throughout. Real photography swaps in on Day 13.
 
 ## Phase 7 — Channels (Days 19–24)
 
+**Channel order updated per DEC-014: Google first (Search + Shopping), then Facebook, then TikTok — not Meta-first as originally sequenced below.** Google Shopping requires a live, priced product feed, so this cannot start before Phase 4 (store build) and DSers/CJdropshipping product listings are complete.
+
 ### Days 19–20 — Marketplace
 - Photograph for Marketplace specifically — 1:1, in-cab hero first
 - Write all five listings from `marketing/marketplace-strategy.md`
@@ -157,20 +159,22 @@ Placeholder images throughout. Real photography swaps in on Day 13.
 - **Start posting.** Week 1 of the calendar — problem and education, zero product links.
 - Begin Group participation. **No promotional posts. None.**
 
-### Days 23–24 — Ads preparation
-- Business Manager, ad account, domain verification
-- Aggregated Event Measurement, Purchase prioritized
-- Build Campaign 1: three ad sets, five creatives each, identical
+### Days 23–24 — Ads preparation (Google first, per DEC-014)
+- **Google Ads account + Merchant Center setup.** Submit product feed (CS-01–CS-04) for Shopping approval — this can take 1-3 days, start early.
+- Google Search campaign on branded/high-intent terms ("truck cab organizer," "semi truck seat organizer," etc.)
+- Google Shopping campaign once feed is approved
 - **UTM-tag every link.** A link without UTMs is data lost permanently.
 - Run the full pre-launch gate checklist from `finance/testing-budget.md`
 - **Do not launch if any item fails.**
+- **Meta (Facebook) setup runs in parallel but launches second:** Business Manager, ad account, domain verification, Aggregated Event Measurement, Purchase prioritized. Build Campaign 1 (three ad sets per DEC-007) but hold launch until Google has produced real order data.
+- **TikTok is the third channel** — set up Business Center and pixel once Google + Facebook are both live and one has validated CPA.
 
 ---
 
 ## Phase 8 — Launch and optimize (Days 25–30)
 
 ### Day 25 — Launch
-- Campaign 1 live at $30/day CBO
+- **Google Search + Shopping live first**, per DEC-014 (not Meta — see Days 23-24)
 - **Then do nothing for 72 hours.** Editing resets the learning phase and wastes the spend already made. This is the most commonly broken rule in small-budget testing and the hardest to follow.
 - Keep posting organically. Keep answering Marketplace.
 
