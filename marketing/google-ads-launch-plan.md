@@ -66,7 +66,23 @@ Product approval typically takes **1–3 business days**, sometimes longer for a
 
 ## Phase 2 — Campaign structure
 
-**Recommendation: Standard Shopping + a small Search campaign. Not Performance Max, not yet.**
+### Starter variant: $5/day, two products, Shopping only
+
+**Use this to launch, then graduate to the full plan below once the pipeline is validated.**
+
+At $5/day you get roughly 3–6 clicks total (at $0.80–$1.50 CPC) — not enough to meaningfully split across campaign types or the full 4-product catalog. So:
+
+- **One campaign: Standard Shopping only.** Skip Search at this budget — Shopping matches your product feed directly, no keyword research needed.
+- **Products:** **CS-01 and CS-02 only**, via a product group filter that excludes CS-03 and CS-04 from this campaign's targeting. Reasoning:
+  - **CS-01** — best keyword match to real search volume ("truck cab organizer," "truck seat organizer"), break-even CPA $23.08
+  - **CS-02** — lower price point for an easier first purchase from an unknown brand, real search terms exist ("truck cargo net"), break-even CPA $20.92, best margin of the two (69.8%)
+  - CS-03 excluded: weak standalone search demand (upsell item, not something people search for directly)
+  - CS-04 excluded: below the 45% margin floor per DEC-015, not advertised standalone regardless of budget
+- **Bidding:** Manual CPC, max **$0.75** (lower than the full-plan $1.00, to stretch the thin daily budget across more clicks)
+- **Budget:** $5.00/day
+- **Goal at this stage is not performance — it's validating the pipeline** (feed approved, images compliant, checkout completes, conversion tracking fires). Expect roughly a week to gather 20-30 clicks. Once validated, graduate to the full plan below.
+
+### Full plan (once validated): Standard Shopping + a small Search campaign. Not Performance Max, not yet.
 
 PMax is Google's default recommendation and it is the wrong first campaign for you. It needs conversion history to optimize, spends across YouTube/Display/Gmail where your cold audience doesn't convert, and gives you almost no visibility into what's working. With zero conversion data and a sub-$25 break-even CPA on singles, it will burn budget teaching itself. Revisit it once you have 30+ conversions.
 
