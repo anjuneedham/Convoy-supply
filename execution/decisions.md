@@ -198,15 +198,13 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 ---
 
 ## OPEN-08 — Atlas AI website tool: Shopify-compatible or replacement?
-**Flagged 2026-09-21**
+**Flagged 2026-09-21 · RESOLVED 2026-09-22**
 
-**Question:** Does Atlas AI build on top of the existing Shopify store (keeping DSers/CJdropshipping product sync working) or does it replace Shopify as the storefront platform?
+**Resolution:** A theme export from the live store (`nax2hx-gr.myshopify.com`) confirms the store runs on **genuine Shopify**, using the **"Tinker" theme** (v4.2.0, an Online Store 2.0 theme with sections for hero, featured-product, product-list, collection-list, product-information, and product-recommendations). Whatever "Atlas AI" refers to, the underlying store is Shopify — so all CJdropshipping/DSers product sync work and the custom Liquid sections built in `theme/sections/` remain fully applicable.
 
-**Why it matters:** All sourcing work done today (CS-01, CS-02 listed via CJdropshipping) pushes products into **Shopify** specifically. If Atlas AI is a separate website builder, those integrations don't carry over — products would need to be manually re-listed or a different dropship-to-website pipeline set up. DEC-008 (Dawn theme, zero apps) and the store-build phase in `execution/30-day-plan.md` also assume Shopify.
+**Note:** Tinker is a different theme than the Dawn theme assumed in DEC-008. Dawn-specific instructions in `theme/README.md` (install steps, section-group names for suppressing nav) will need adjusting for Tinker's actual section/group structure before the custom `cs-*` sections are added — the sections themselves are portable Liquid, but the install steps referencing Dawn's file layout are not guaranteed to match Tinker's.
 
-**Needs:** Confirmation of what Atlas AI actually is and whether it sits on Shopify's checkout/backend or is a standalone platform.
-
-**When:** Before Phase 4 (store build) proceeds much further.
+**Original question:** Does Atlas AI build on top of the existing Shopify store or does it replace Shopify as the storefront platform?
 
 ---
 
