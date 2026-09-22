@@ -43,4 +43,4 @@ Occasionally a shipment runs past the estimated window — weather, customs, or 
 
 ## Contact
 
-Questions about an order in transit: **[SUPPORT EMAIL — fill in]**
+Questions about an order in transit: **convoysupplyco@gmail.com**

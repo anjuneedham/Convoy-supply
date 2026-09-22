@@ -60,4 +60,4 @@ These terms are governed by the laws of **[JURISDICTION — fill in based on bus
 
 ## Contact
 
-**[SUPPORT EMAIL — fill in]**
+**convoysupplyco@gmail.com**

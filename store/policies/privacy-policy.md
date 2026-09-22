@@ -49,7 +49,7 @@ Depending on where you live, you may have the right to:
 - Request correction or deletion of your data
 - Opt out of marketing communications at any time
 
-To exercise any of these, email us at **[SUPPORT EMAIL — fill in]**.
+To exercise any of these, email us at **convoysupplyco@gmail.com**.
 
 ## Data retention
 
@@ -65,4 +65,4 @@ If this policy changes materially, we'll update the date at the top of this page
 
 ## Contact
 
-**[SUPPORT EMAIL — fill in]**
+**convoysupplyco@gmail.com**

@@ -40,4 +40,4 @@ Most of what we sell is inexpensive enough that a traditional "ship it back for 
 
 ## Contact
 
-**[SUPPORT EMAIL — fill in]**
+**convoysupplyco@gmail.com**
