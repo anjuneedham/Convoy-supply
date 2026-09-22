@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 100" width="560" height="100">
+  <style>
+    .word { font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif; font-weight: 700; }
+    .tag { font-family: 'Roboto Mono', 'Courier New', monospace; font-weight: 400; letter-spacing: 0.16em; }
+  </style>
+  <text x="0" y="52" class="word" font-size="50" fill="#1C1F21">CONVOY<tspan fill="#E8B23A">SUPPLY</tspan></text>
+  <rect x="2" y="64" width="26" height="4" fill="#E8B23A"/>
+  <text x="0" y="86" class="tag" font-size="13" fill="#6B7075">SQUARED AWAY</text>
+</svg>
