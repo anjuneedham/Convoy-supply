@@ -226,7 +226,7 @@ The theme code enforces this structurally — `cs-proof` cannot render a review 
 | # | Question | Needs | When |
 |---|---|---|---|
 | ~~OPEN-01~~ | ~~Which supplier?~~ | **Resolved by DEC-013** — DSers/AliExpress, no single supplier selection needed | — |
-| OPEN-02 | Who pays return shipping? | Margin model + return-rate estimate. Note: most AliExpress dropship suppliers do not accept returns — refund-only policy likely required | Before publishing the returns policy |
+| ~~OPEN-02~~ | ~~Who pays return shipping?~~ | **Resolved 2026-09-22** — no mail-in return for most cases. Damaged/defective/wrong items: refund or replace without requiring return shipping (CJdropshipping return shipping to China would exceed item value). Unwanted-but-correct items: case-by-case partial refund/credit within 14 days. See `store/policies/returns-policy.md`. | — |
 | OPEN-03 | Business entity — sole proprietor or LLC? | Liability view, especially if CS-05 ever launches | Before first sale |
 | ~~OPEN-04~~ | ~~Fulfillment — self-ship or 3PL?~~ | **Resolved by DEC-013** — dropship, supplier ships direct to customer | — |
 | OPEN-05 | Marketplace price parity with the site? | Test data | After 2 weeks live |
