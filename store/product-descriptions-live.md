@@ -116,6 +116,46 @@ Voice rules still apply from `brand/brand-copy.md`: no fabricated specs, no fake
 
 ---
 
+---
+
+## Bundle — The Cab Reset Kit — $89.00
+
+**Contains:** CS-01 Cab Command Organizer + CS-02 Bunk Shelf Net + CS-03 Manifest Folio
+**List sum:** $107.98 ($50 + $29.99 + $27.99) · **Save $18.98**
+
+**Title:** The Cab Reset Kit
+
+**Short:**
+> The three pieces that change the most: your passenger seat, your bunk wall, and your paperwork. Buy them together and save $18.98 against buying them separately.
+
+**Long:**
+> Three problems, three fixes, one order. The CS-01 gets your passenger seat organized. The CS-02 turns your empty bunk wall into a shelf. The CS-03 gets your paperwork out of the door pocket and into one place.
+>
+> Bought separately these three come to $107.98. Together they're $89 — a real $18.98 off, not a markup-then-discount. Ships as three items from three listings; expect them to arrive separately, not in one box.
+
+**Fulfillment note (internal — not customer-facing):** This is a manually-fulfilled bundle, not a Shopify Bundles app product. When one sells, place 3 separate CJdropshipping orders (CS-01, CS-02, CS-03 components) to the customer's address. No app installed, per DEC-008.
+
+---
+
+## Bundle — The Full Rig Kit — $129.00
+
+**Contains:** All four — CS-01 + CS-02 + CS-03 + CS-04
+**List sum:** $156.98 · **Save $27.98**
+
+**Title:** The Full Rig Kit
+
+**Short:**
+> Everything we make. Front of cab, bunk, paperwork, and bulk storage. Save $27.98 against buying all four separately.
+
+**Long:**
+> Every zone in the cab, sorted in one order. The CS-01 for the passenger seat, the CS-02 for the bunk wall, the CS-03 for paperwork, and the CS-04 for everything else you're hauling.
+>
+> Individually these four run $156.98. Together, $129 — the real difference, not an inflated compare-at. Ships as four separate items from four listings.
+
+**Fulfillment note (internal):** Same as above — 4 manual CJdropshipping orders per sale. CS-04 carries a thin 37% margin (DEC-015); the bundle's blended margin is still healthy because CS-01/02/03 carry it.
+
+---
+
 ## Margin note (carry forward from DEC-015)
 
 CS-04 runs at ~37% contribution margin, below the 45% floor. **Do not write ad copy that positions CS-04 as a standalone hero offer** — feature it inside the Full Rig Kit bundle instead, where CS-01/02/03's margins carry the average.
