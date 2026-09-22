@@ -73,7 +73,7 @@ PMax is Google's default recommendation and it is the wrong first campaign for y
 ### Campaign 1 — Standard Shopping
 - **Budget:** $15/day to start
 - **Bidding:** Manual CPC, max $1.00 to start (raise only if impression share is starved)
-- **Targeting:** US only
+- **Targeting:** US and Canada (matches actual shipping policy — verify CJdropshipping Canada shipping cost/time before launch, since figures used elsewhere in this doc are from the US-specific shipping method)
 - **Products:** All 4, but create a separate ad group for the bundles once they're listed
 - Shopping campaigns target by *product feed*, not keywords — so the product titles matter enormously (see title formula below)
 

@@ -12,7 +12,7 @@ Orders are processed within **1–3 business days** before shipping.
 
 ## Transit time
 
-Once shipped, delivery typically takes **5–11 business days** within the continental United States.
+Once shipped, delivery typically takes **5–11 business days** within the United States and Canada.
 
 **Total time from order to delivery: usually 6–14 business days.** We know that's not "free 2-day shipping," and we're not going to pretend it is. If you need something faster than that, this may not be the right store for this order.
 
@@ -31,7 +31,7 @@ You'll receive a tracking number by email once your order ships. If you don't se
 
 ## Where we ship
 
-Currently: **United States only.**
+Currently: **United States and Canada.**
 
 ## You're not home — we know
 
