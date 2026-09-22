@@ -56,7 +56,7 @@ We may update these terms from time to time. Continued use of the site after a c
 
 ## Governing law
 
-These terms are governed by the laws of **[JURISDICTION — fill in based on business registration]**.
+These terms are governed by the laws of **Jamaica**.
 
 ## Contact
 
